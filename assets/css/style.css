@@ -48,13 +48,13 @@ h1 {
 .herobg {
   width: 100%;
   height: 100%;
-  background: url("./assets/images/hero-ban/dot-form@2x.png") no-repeat 50% 50%;
+  background: url("/assets/images/hero-ban/dot-form@2x.png") no-repeat 50% 50%;
   background-size: contain;
   position: absolute;
 }
 
 .f-line {
-  background: url("./assets/images/hero-ban/f-line@2x.png") no-repeat 50% 50%;
+  background: url("/assets/images/hero-ban/f-line@2x.png") no-repeat 50% 50%;
   background-size: contain;
   position: absolute;
   width: 100%;
@@ -62,7 +62,7 @@ h1 {
 }
 
 .f-shap {
-  background: url("./assets/images/hero-ban/f-shap@2x.png") no-repeat 50% 50%;
+  background: url("/assets/images/hero-ban/f-shap@2x.png") no-repeat 50% 50%;
   background-size: contain;
   position: absolute;
   width: 100%;
@@ -70,7 +70,7 @@ h1 {
 }
 
 .f-shad {
-  background: url("./assets/images/hero-ban/f-shad@2x.png") no-repeat 50% 50%;
+  background: url("/assets/images/hero-ban/f-shad@2x.png") no-repeat 50% 50%;
   background-size: contain;
   position: absolute;
   width: 100%;
@@ -78,7 +78,7 @@ h1 {
 }
 
 .cloud-bg {
-  background: url("./assets/images/hero-ban/main/cloud-bg.png") no-repeat 50% 50%;
+  background: url("/assets/images/hero-ban/main/cloud-bg.png") no-repeat 50% 50%;
   background-size: cover;
   position: absolute;
   width: 100%;
@@ -97,13 +97,13 @@ h1 {
 .main-bg {
   width: 100%;
   height: calc(100vh);
-  background: url("./assets/images/hero-ban/main/main-bg.png") no-repeat 50% 50%;
+  background: url("/assets/images/hero-ban/main/main-bg.png") no-repeat 50% 50%;
   background-size: cover;
   position: absolute;
 }
 
 .md-bg {
-  background: url("./assets/images/hero-ban/main/md-bg.png") no-repeat 50% 50%;
+  background: url("/assets/images/hero-ban/main/md-bg.png") no-repeat 50% 50%;
   background-size: cover;
   position: absolute;
   width: 100%;
@@ -113,7 +113,7 @@ h1 {
 }
 
 .shad-bg {
-  background: url("./assets/images/hero-ban/main/shad-bg.png") no-repeat 50% 50%;
+  background: url("/assets/images/hero-ban/main/shad-bg.png") no-repeat 50% 50%;
   background-size: cover;
   position: absolute;
   width: 100%;
@@ -124,7 +124,7 @@ h1 {
 }
 
 .shap-bg {
-  background: url("./assets/images/hero-ban/main/shap-bg.png") no-repeat 50% 50%;
+  background: url("/assets/images/hero-ban/main/shap-bg.png") no-repeat 50% 50%;
   background-size: cover;
   position: absolute;
   width: 100%;
@@ -135,7 +135,7 @@ h1 {
 }
 
 .sil-bg {
-  background: url("./assets/images/hero-ban/main/sil-bg.png") no-repeat 50% 0;
+  background: url("/assets/images/hero-ban/main/sil-bg.png") no-repeat 50% 0;
   background-size: cover;
   position: absolute;
   bottom: -30%;
@@ -158,7 +158,7 @@ h1 {
   }
 }
 .dot-f {
-  background: url("./assets/images/hero-ban/dot-form@2x.png") no-repeat 50% 50%;
+  background: url("/assets/images/hero-ban/dot-form@2x.png") no-repeat 50% 50%;
   background-size: contain;
   position: absolute;
   width: 100%;
