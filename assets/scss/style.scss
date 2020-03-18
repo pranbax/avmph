@@ -236,6 +236,7 @@ height: 300px;
     // height: auto;
     min-width: 100%;
     min-height: 100%;
+    overflow: hidden;
 }
 @media (min-aspect-ratio: 16/9) {
     #bgvid {
