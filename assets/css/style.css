@@ -11,12 +11,107 @@ body {
   overflow-x: hidden;
 }
 
+body.loading {
+  overflow: hidden !important;
+  height: 100vh;
+}
+
 h1 {
   font-family: "Anton";
   font-weight: 100;
   color: #70CDDD;
 }
 
+.preloader {
+  background: url(../images/mrisc.png) no-repeat 50% 50%;
+  background-size: cover;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 999999;
+}
+
+.preloader.doneload {
+  animation: loadout 1s;
+  -webkit-animation: loadout 1s;
+  visibility: hidden;
+  opacity: 0;
+  transition-duration: 500ms;
+  transition-property: opacity, visibility;
+  transition-delay: 0;
+}
+
+@keyframes loadout {
+  0% {
+    opacity: 1;
+    transform: scale(2);
+  }
+  40% {
+    opacity: 0.75;
+    transform: scale(4);
+  }
+  80% {
+    opacity: 0.5;
+    transform: scale(8);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(16);
+  }
+}
+.loadercir1, .loadercir2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 5px solid transparent;
+  border-radius: 50%;
+}
+
+.loadercir1 {
+  width: 70px;
+  height: 70px;
+  margin: -35px 0 0 -35px;
+  border-top: 5px solid #fcfcfc;
+  border-bottom: 5px solid #fcfcfc;
+  animation: spinc 2s linear infinite;
+}
+
+.loadercir2 {
+  width: 50px;
+  height: 50px;
+  margin: -25px 0 0 -25px;
+  border-top: 5px solid #7cb9ff;
+  border-bottom: 5px solid #7cb9ff;
+  animation: spincc 2s linear infinite;
+}
+
+.loader {
+  width: 50%;
+  height: 100%;
+  margin: auto;
+  position: relative;
+}
+
+@keyframes spinc {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spincc {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
 #about {
   width: 100%;
   height: 100vh;
@@ -100,6 +195,7 @@ h1 {
   background: url(../images/hero-ban/main/main-bg.png) no-repeat 50% 50%;
   background-size: cover;
   position: absolute;
+  opacity: 0.2;
 }
 
 .md-bg {
@@ -149,7 +245,7 @@ h1 {
   background-size: cover;
   width: 100%;
   height: 100%;
-  z-index: 11;
+  z-index: 0;
 }
 
 @media only screen and (min-width: 100em) {
@@ -221,21 +317,8 @@ h1 {
 #bgvid {
   min-width: 100%;
   min-height: 100%;
-  overflow: hidden;
 }
 
-@media (min-aspect-ratio: 16/9) {
-  #bgvid {
-    width: 100%;
-    height: auto;
-  }
-}
-@media (max-aspect-ratio: 16/9) {
-  #bgvid {
-    width: auto;
-    height: 100%;
-  }
-}
 #aboutvid {
   display: none;
   position: absolute;
@@ -288,7 +371,6 @@ h1 {
   position: relative;
   width: 100%;
   height: auto;
-  overflow: hidden;
 }
 
 .overlay-vid {
@@ -489,7 +571,7 @@ h1 {
 
 .contact {
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: -9.5rem;
   transform: translateY(50%);
   z-index: 700;
@@ -714,10 +796,17 @@ ul li a:hover:after, ul li a:hover:before {
   border-radius: 1rem;
 }
 
+.whoare {
+  position: relative;
+  width: 100%;
+  margin-top: -80%;
+}
+
 .aboutsvg01 {
   position: absolute;
-  bottom: -150px;
-  left: -40px;
+  top: 0;
+  left: 0px;
+  margin-top: -10%;
   z-index: -1;
 }
 
