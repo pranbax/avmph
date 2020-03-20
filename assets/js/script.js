@@ -1,4 +1,4 @@
-// INIT ANIMATIONS
+// INITIALIZE
 
 AOS.init({
   startEvent: 'load'
@@ -83,4 +83,28 @@ $(".avmtype").on('click', function(e) {
 
   console.log(tab);
 
+});
+
+//TYPES SCRIPT TAB
+$(".avmtype").on('click', function(e) {
+  e.preventDefault();
+
+  $('.avmtype.tabcurrent').removeClass('tabcurrent');
+  $("div.type-description p.active").removeClass('active');
+
+      var menu = $(this);
+      var div = menu.children();
+      var p = div.children();
+
+  menu.addClass('tabcurrent');
+  p.addClass('active');
+});
+$("a.avmtype").on('click', function(e) {
+  e.preventDefault();
+
+  var tab = $(this).attr("href");
+
+  $('.tab-cont.active').removeClass("active");
+  $('.tab-cont').filter(tab).addClass("active");
+  $(tab).fadeIn();
 });

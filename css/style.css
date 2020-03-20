@@ -11,13 +11,9 @@ body {
   overflow-x: hidden;
 }
 
-main.loading {
+body.loading {
   overflow: hidden !important;
   height: 100vh;
-}
-
-body p {
-  color: #16adaf;
 }
 
 h1 {
@@ -26,7 +22,7 @@ h1 {
   color: #70CDDD;
 }
 
-main.wrapper {
+.wrapper {
   position: relative;
   width: 100%;
   overflow-x: hidden !important;
@@ -313,6 +309,20 @@ main.wrapper {
 .navbar .navbar-brand {
   font-family: "Anton";
   font-weight: 300;
+}
+
+.carousel-inner > .carousel-item > img {
+  width: 100%;
+  height: 100%;
+  margin-top: 5%;
+}
+
+.carousel .carousel-inner .carousel-fit {
+  float: left;
+  object-fit: cover;
+  transform: translateX(20%);
+  width: 300px;
+  height: 300px;
 }
 
 #bgvid {
@@ -841,201 +851,6 @@ svg.in-view #triangle {
 @keyframes strokel {
   to {
     stroke-dashoffset: 0;
-  }
-}
-.tabcontainer {
-  position: relative;
-}
-
-.tab-menu {
-  position: relative;
-  z-index: 15;
-  display: block;
-}
-
-.menu-item {
-  position: relative;
-  display: inline-block;
-}
-
-.tab-menu .avmtype {
-  padding: 65px 60px;
-}
-
-.tab-menu .avmtype.type1 {
-  background: url(../images/tab/tru.jpg);
-  background-repeat: no-repeat;
-  background-position: 0 50%;
-  background-size: 200px;
-  max-width: 100%;
-}
-
-.tab-menu .avmtype.type2 {
-  background: url(../images/tab/cav.jpg);
-  background-repeat: no-repeat;
-  background-position: 0 50%;
-  background-size: 200px;
-  max-width: 100%;
-}
-
-.tab-menu .avmtype.type3 {
-  background: url(../images/tab/ven.jpg);
-  background-repeat: no-repeat;
-  background-position: 0 50%;
-  background-size: 200px;
-  max-width: 100%;
-}
-
-.tab-menu .avmtype.type4 {
-  background: url(../images/tab/dur.jpg);
-  background-repeat: no-repeat;
-  background-position: 0 50%;
-  background-size: 200px;
-  max-width: 100%;
-}
-
-.tab-menu .avmtype.type5 {
-  background: url(../images/tab/hem.jpg);
-  background-repeat: no-repeat;
-  background-position: 0 50%;
-  background-size: 200px;
-  max-width: 100%;
-}
-
-.tab-menu .avmtype.tabcurrent {
-  border: 5px solid #16adaf;
-  background-position: 50% 50%;
-  background-size: cover;
-  border-radius: 5px;
-  transform: scale(1.1);
-}
-
-.tab-link {
-  display: inline-block;
-  vertical-align: top;
-  text-decoration: none;
-  text-align: left;
-  cursor: pointer;
-  color: #111b20;
-}
-
-.types {
-  background-color: #111b20;
-}
-
-.type-description {
-  position: absolute;
-  width: 100%;
-  left: 0;
-  right: 0;
-  bottom: -65px;
-  height: 50px;
-}
-
-.type-description p.active {
-  color: #16adaf;
-  font-weight: 300;
-  text-transform: uppercase;
-}
-
-.type-description p {
-  font-family: "Anton";
-  font-weight: 100;
-  color: #fcfcfc;
-}
-
-.col > a.a-active {
-  transform: scale(1.1, 1.2);
-  border-bottom: 5px solid #16adaf;
-  z-index: 5;
-}
-
-.col-count-2 {
-  column-count: 2;
-  column-gap: 20px;
-}
-
-.type-img-1 {
-  position: relative;
-  float: left;
-  display: block;
-}
-
-.max-80 img {
-  width: 100%;
-}
-
-.type-fit-y {
-  display: inline-block;
-  object-fit: scale-down;
-  width: 100%;
-  height: 500px;
-}
-
-.type-fit-x {
-  display: block;
-  object-fit: scale-down;
-}
-
-.type-fit-s {
-  display: inline-block;
-  object-fit: scale-down;
-  margin-top: 20px;
-  margin-left: 50%;
-  max-width: 50%;
-}
-
-.tab-cont {
-  display: none;
-}
-
-.tab-cont.active {
-  display: block;
-  animation: opa 1s linear 1;
-}
-
-@keyframes opa {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-.carousel {
-  width: 60%;
-}
-
-.carousel-inner .carousel-item {
-  height: 40vh;
-}
-
-.carousel-inner .carousel-item img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  max-height: 800px;
-  width: 100%;
-}
-
-@media (max-width: 414px) {
-  .tab-menu .avmtype {
-    padding: 35px 30px;
-  }
-
-  .col a.a-active {
-    font-size: 0.7rem;
-  }
-
-  .type-description > p {
-    font-size: 0.7rem;
-  }
-
-  h1.display-1 {
-    font-size: 3.5rem;
   }
 }
 /*!
