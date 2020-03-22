@@ -47,6 +47,12 @@ $(".sideContact").click(function() {
       scrollTop: $("#contact").offset().top
   }, 2000);
 });
+$(".card-link").click(function() {
+  var href = $(this).attr('href')
+  $([document.documentElement, document.body]).animate({
+      scrollTop: $(href).offset().top
+  }, 2000);
+});
 
 
 //animate traiangle on about without library
