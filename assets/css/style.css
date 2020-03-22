@@ -996,7 +996,7 @@ svg.in-view #triangle {
   flex-direction: column;
   flex-wrap: wrap;
   position: relative;
-  height: 65vmax;
+  height: 70vmax;
   padding: 20px;
 }
 .prof-info:before {
