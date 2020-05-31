@@ -9,58 +9,79 @@ var rellax = new Rellax('.rellax', {
 });
 
 
-//Toggle Sidebar
+//Fade in document Toggle Sidebar
 
 $(document).ready(function () {
+
     $(".clickbtn").on('click', function () {
       $(".sidebar").toggleClass("active"); 
       $(".clickbtn").toggleClass("toggle");
+      $(".overlay").toggleClass("active");
+      $(".wrapper").toggleClass("active");
+
+      $.each($(".dropdown-container"), function(){
+        if ($(this).css('display') === 'block') {
+          $(this).css('display', 'none');
+        };
+      });
+      
     })
     $(".sidebar a").on('click', function () {
       $(".sidebar").toggleClass("active"); 
       $(".clickbtn").toggleClass("toggle");
+      $(".overlay").toggleClass("active");
+      $(".wrapper").toggleClass("active");
     })
 });
 
-//scroll Click
-
-$(".sideHome").click(function() {
-  $([document.documentElement, document.body]).animate({
-      scrollTop: $("#lpage").offset().top
-  }, 2000);
+//navbtn on mouse hover
+$(".clickbtn").hover(
+  function() { 
+    if (!$("#menu-btn").hasClass("toggle")) {
+      $("img.navbtn-icon").addClass("hover"); 
+    } 
+  }, 
+  function() { 
+    if (!$("#menu-btn").hasClass("toggle")) {
+      $("img.navbtn-icon").removeClass("hover");
+    } else {
+      $("img.navbtn-icon").removeClass("hover");
+    }
 });
 
-$(".scrolldown, .sideAbout").click(function() {
-  $([document.documentElement, document.body]).animate({
-      scrollTop: $("#about").offset().top
-  }, 2000);
-});
 
-$(".sideAvm").click(function() {
-  $([document.documentElement, document.body]).animate({
-      scrollTop: $("#aboutavm").offset().top
-  }, 2000);
-});
+// scroll to page on click
 
-$(".sideContact").click(function() {
-  $([document.documentElement, document.body]).animate({
-      scrollTop: $("#contact").offset().top
-  }, 2000);
-});
-$(".card-link").click(function() {
+$(".card-link, .sidebar a, .nav-footer a").on('click', function() {
   var href = $(this).attr('href')
   $([document.documentElement, document.body]).animate({
       scrollTop: $(href).offset().top
   }, 2000);
 });
 
+// Side nav Dropdown
+let dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
 
-//animate traiangle on about without library
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}
 
-var triangle = document.getElementById("triangle");
-var length = triangle.getTotalLength();
 
-var svg = document.getElementById('triasvg');
+// animate triangle on about without library //
+
+let triangle = document.getElementById("triangle");
+let length = triangle.getTotalLength();
+
+let svg = document.getElementById('triasvg');
 
 function isElementInViewport(el) {
   var triang = el.getBoundingClientRect();
@@ -82,6 +103,7 @@ $("#diagModal").on('hide.bs.modal', function() {
 
 
 //TAB CONTROL
+
 $(".avmtype").on('click', function(e) {
   e.preventDefault();
 

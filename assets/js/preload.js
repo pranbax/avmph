@@ -1,5 +1,5 @@
 $(window).on('load', function() {
     $('.preloader').addClass('doneload');
-    $('main').removeClass('loading');
-
-})
+    $(".content").removeClass('loading');
+    $(".content").fadeIn(4000);
+});
